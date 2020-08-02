@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fa09f8a-6772-4b76-af52-2580cd84d09d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/finder/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/finder/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finder/templates/finder/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/finder/templates/finder/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finder/templates/finder/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/finder/templates/finder/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finder/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/finder/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/finder/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" column="81" selection-start-line="18" selection-start-column="81" selection-end-line="18" selection-end-column="81" />
+              <caret line="18" column="83" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="83" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -37,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/finder/templates/finder/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -94,13 +91,13 @@
         <option value="$PROJECT_DIR$/finder/forms.py" />
         <option value="$PROJECT_DIR$/finder/urls.py" />
         <option value="$PROJECT_DIR$/finder/models.py" />
-        <option value="$PROJECT_DIR$/finder/views.py" />
         <option value="$PROJECT_DIR$/finder/templates/finder/search.html" />
         <option value="$PROJECT_DIR$/finder/templates/finder/index.html" />
+        <option value="$PROJECT_DIR$/finder/views.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -299,16 +296,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finder/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="81" selection-start-line="18" selection-start-column="81" selection-end-line="18" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/finder/templates/finder/search.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -320,6 +307,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="86" selection-start-line="16" selection-start-column="86" selection-end-line="16" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finder/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="83" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="83" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
