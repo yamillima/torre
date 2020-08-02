@@ -16,8 +16,8 @@ def new_search(request):
         if form.is_valid():
             term = form.save(commit=False)
             ji = []
-            url = 'https://search.torre.co/opportunities/_search/?[offset=&size=100&aggregate=]'
-            x = requests.post(url)
+            url = 'https://search.torre.co/opportunities/_search/?[offset=&size=1000&aggregate=]'
+            x = requests.post(url, verify=False)
             for i in x.json()["results"]:
                 for c in i["skills"]:
                     if c["name"] == term.text:
