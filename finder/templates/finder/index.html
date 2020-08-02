@@ -12,9 +12,9 @@
 <h2>Torre App by Yamil Lima</h2>
 <h2>Score: {{ count }}</h2>
 <table>
-    <tr><th>Job</th><th>Date & Time</th></tr>
+    <tr><th>Skill</th><th>Jobs IDs for use with Torre API</th><th>Date & Time</th></tr>
     {% for searches in searches %}
-    <tr><td>{{ searches.text }}</td><td>{{ searches.date }}</td></tr>
+    <tr><td>{{ searches.text }}</td><td>{{ searches.jobsid }}</td><td>{{ searches.date }}</td></tr>
     {% endfor %}
 </table>
 </body>

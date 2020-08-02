@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Search
 from .forms import SearchForm
+import requests
 
 
 def index(request):
@@ -13,7 +14,16 @@ def new_search(request):
     if request.method == "POST":
         form = SearchForm(request.POST)
         if form.is_valid():
-            save = form.save()
+            term = form.save(commit=False)
+            ji = []
+            url = 'https://search.torre.co/opportunities/_search/?[offset=&size=1000&aggregate=]'
+            x = requests.post(url)
+            for i in x.json()["results"]:
+                for c in i["skills"]:
+                    if c["name"] == term.text:
+                        ji.append(i["id"])
+            term.jobsid = ji
+            term.save()
             return redirect('index')
         else:
             form = SearchForm()
