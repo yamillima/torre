@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Torre App by Yamil Lima</title>
+    <style>
+    body {text-align: center}
+    table, th, td {margin: auto; border-collapse: collapse; border: 1px solid}
+    </style>
 </head>
 <body>
-<p>Torre App by Yamil Lima</p>
+<h2>Torre App by Yamil Lima</h2>
+<h2>Score: {{ count }}</h2>
+<table>
+    <tr><th>Job</th><th>Date & Time</th></tr>
+    {% for searches in searches %}
+    <tr><td>{{ searches.text }}</td><td>{{ searches.date }}</td></tr>
+    {% endfor %}
+</table>
 </body>
 </html>

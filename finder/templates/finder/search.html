@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Torre App by Yamil Lima</title>
+    <style>
+        body {text-align:center;}
+        .search-box {width:500px; resize:none; padding:10px}
+    </style>
+    <script>
+    document.addEventListener("keydown", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("submit").click();
+        }
+    });
+    </script>
+</head>
+<body>
+<h2>Torre App by Yamil Lima</h2>
+<p>Look for jobs in Torre and win prizes. Write your skill and click search:</p>
+    <form id="form" method="POST">{% csrf_token %}
+        <p>
+        {% for field in form %}
+            {{ field }}
+        {% endfor %}
+        </p>
+        <button id="submit" type="submit" value="submit">SEARCH</button>
+    </form>
+</body>
+</html>
