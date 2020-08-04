@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Torre App by Yamil Lima</title>
     <style>
         body {text-align:center; color:white; background-color:black}
-        .search-box {width:500px; resize:none; padding:10px; background-color:black; color:white; border:1px solid red}
-        .search-box:focus {background-color:maroon}
-        button {height:40px; width:100px; background-color:red; color:white; font-weight:bold}
-        img {width:150px}
+        .search-box {line-height:40px ;height:40px; font-size:20px; width:90%; max-width:500px; resize:none; background-color:black; color:white; border:1px solid maroon}
+        .search-box:focus {background-color:maroon; outline-color:red}
+        .search-box:hover {border:1px solid red;}
+        button {height:50px; width:150px; background-color:maroon; color:white; font-size:20px}
+        button:hover {background-color:red}
+        img {width:100%; max-width:150px}
     </style>
     <script>
     document.addEventListener("keydown", function(event) {
@@ -20,9 +23,10 @@
     </script>
 </head>
 <body>
+<h1>Torre App by Yamil Lima</h1>
 <img src="https://image.freepik.com/free-photo/glass-chess-rook-black-isolated-background_56854-700.jpg">
-<h2>Torre App by Yamil Lima</h2>
-<p>Look for jobs in Torre and win prizes. Write your skill here:</p>
+<p>Look for jobs in Torre and win prizes.Write your skill here:</p>
+<p>
     <form id="form" method="POST">{% csrf_token %}
         <p>
         {% for field in form %}
@@ -31,8 +35,8 @@
         </p>
         <button id="submit" type="submit" value="submit">SEARCH</button>
     </form>
-<br><br>
-<p>You will receive points for looking for jobs and win prizes from our sponsors.</p>
-    <p>In the future, we hope governments will provide subsidies to active job seekers through our ranking system.</p>
+</p>
+<br>
+<p>You will receive points for looking for jobs and win prizes from our sponsors. In the future, we hope governments will provide subsidies to active job seekers through our ranking system.</p>
 </body>
 </html>
