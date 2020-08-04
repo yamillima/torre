@@ -6,12 +6,11 @@
     <title>Torre App by Yamil Lima</title>
     <style>
         body {text-align:center; color:white; background-color:black}
-        .search-box {line-height:40px ;height:40px; font-size:20px; width:90%; max-width:500px; resize:none; background-color:black; color:white; border:1px solid maroon}
-        .search-box:focus {background-color:maroon; outline-color:red}
-        .search-box:hover {border:1px solid red;}
-        button {height:50px; width:150px; background-color:maroon; color:white; font-size:20px}
-        button:hover {background-color:red}
-        img {width:100%; max-width:150px}
+        .search-box {line-height:40px ;height:40px; font-size:20px; width:95%; max-width:500px; resize:none; background-color:black; color:white; border:1px solid red}
+        .search-box:focus {background-color:maroon; outline-color:red;}
+        button {height:40px; width:130px; background-color:red; color:white; font-size:20px}
+        button:hover {background-color:red;}
+        img {width:100%; max-width:120px}
     </style>
     <script>
     document.addEventListener("keydown", function(event) {
@@ -23,7 +22,7 @@
     </script>
 </head>
 <body>
-<h1>Torre App by Yamil Lima</h1>
+<h2>Torre App by Yamil Lima</h2>
 <img src="https://image.freepik.com/free-photo/glass-chess-rook-black-isolated-background_56854-700.jpg">
 <p>Look for jobs in Torre and win prizes.Write your skill here:</p>
 <p>
@@ -33,10 +32,9 @@
             {{ field }}
         {% endfor %}
         </p>
-        <button id="submit" type="submit" value="submit">SEARCH</button>
+        <button id="submit" type="submit" value="submit">Search</button>
     </form>
 </p>
-<br>
 <p>You will receive points for looking for jobs and win prizes from our sponsors. In the future, we hope governments will provide subsidies to active job seekers through our ranking system.</p>
 </body>
 </html>
