@@ -43,6 +43,7 @@ def results(request):
     orgs = []
     pics = []
     counter = -1
+    r = 0
     if len(ids) > 2:
         for i in ids:
             counter = counter + 1
@@ -50,12 +51,12 @@ def results(request):
                 url = 'https://torre.co/api/opportunities/'+i
                 try:
                     r = requests.get(url)
-                    x = r.json()
-                    jobs.append(x["objective"])
-                    orgs.append(x["organizations"][0]["name"])
-                    pics.append(x["organizations"][0]["picture"])
                 except:
                     print('Connection error!')
+                x = r.json()
+                jobs.append(x["objective"])
+                orgs.append(x["organizations"][0]["name"])
+                pics.append(x["organizations"][0]["picture"])
         dict1 = {"jobs": [[jobs[0]]], "orgs": [[orgs[0]]], "pics": [[pics[0]]]}
         dict2 = {"jobs": [[jobs[1]]], "orgs": [[orgs[1]]], "pics": [[pics[1]]]}
         dict3 = {"jobs": [[jobs[2]]], "orgs": [[orgs[2]]], "pics": [[pics[2]]]}
