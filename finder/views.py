@@ -35,7 +35,8 @@ def new_search(request):
 
 
 def results(request):
-    search = Search.objects.latest("jobsid")
+    search = Search.objects.latest("date")
+    count = Search.objects.all().count()
     words = search.text
     ids = ast.literal_eval(search.jobsid)
     jobs = []
@@ -54,7 +55,7 @@ def results(request):
         dict1 = {"jobs": [[jobs[0]]], "orgs": [[orgs[0]]], "pics": [[pics[0]]]}
         dict2 = {"jobs": [[jobs[1]]], "orgs": [[orgs[1]]], "pics": [[pics[1]]]}
         dict3 = {"jobs": [[jobs[2]]], "orgs": [[orgs[2]]], "pics": [[pics[2]]]}
-        return render(request, 'finder/results.html', {'words': words, 'dict1': dict1, 'dict2': dict2, 'dict3': dict3, 'jobs': jobs, 'orgs': orgs, 'pics': pics})
+        return render(request, 'finder/results.html', {'count': count, 'words': words, 'dict1': dict1, 'dict2': dict2, 'dict3': dict3, 'jobs': jobs, 'orgs': orgs, 'pics': pics})
     else:
         return redirect('failed_search')
 
