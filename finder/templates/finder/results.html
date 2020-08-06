@@ -17,6 +17,8 @@
         th {background-color:white; color:black; border-color:white}
         .container {background-color: #212121; width: 100%; max-width: 600px; display: inline-block; border-color: #212121; border-left-color: red; border-style:solid}
         .job {color: red}
+        a {color: white}
+        a.linked {color: white}
     </style>
 </head>
 <body>
@@ -24,6 +26,11 @@
 <img src="https://image.freepik.com/free-photo/glass-chess-rook-black-isolated-background_56854-700.jpg">
 <h2>Total Score: {{ count }}</h2>
 <p>Search results for skill: {{ words }}</p>
+    {% for row in dict1.ids %}
+    {% for value in row %}
+    <a href={{value}}>
+    {% endfor %}
+    {% endfor %}
 <div class="container">
     {% for row in dict1.pics %}
     {% for value in row %}
@@ -41,7 +48,13 @@
     {% endfor %}
     {% endfor %}
 </div>
+    </a>
 <br><br>
+    {% for row in dict2.ids %}
+    {% for value in row %}
+    <a href={{value}}>
+    {% endfor %}
+    {% endfor %}
 <div class="container">
     {% for row in dict2.pics %}
     {% for value in row %}
@@ -60,6 +73,11 @@
     {% endfor %}
 </div>
 <br><br>
+        {% for row in dict3.ids %}
+        {% for value in row %}
+        <a href={{value}}>
+        {% endfor %}
+        {% endfor %}
 <div class="container">
     {% for row in dict3.pics %}
     {% for value in row %}
