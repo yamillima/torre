@@ -48,7 +48,11 @@ def results(request):
             counter = counter + 1
             if counter < 3:
                 url = 'https://torre.co/api/opportunities/'+i
-                x = requests.get(url).json()
+                try:
+                    r = requests.get(url)
+                except:
+                    print('Connection error!')
+                x = r.json()
                 jobs.append(x["objective"])
                 orgs.append(x["organizations"][0]["name"])
                 pics.append(x["organizations"][0]["picture"])
