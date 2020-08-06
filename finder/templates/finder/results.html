@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Torre App by Yamil Lima</title>
+    <style>
+        body {text-align:center; color:white; background-color:black}
+        .search-box {line-height:40px ;height:40px; font-size:20px; width:100%; max-width:500px:; resize:none; background-color:black; color:white; border:1px solid red}
+        .search-box:focus {background-color:maroon; outline-color:red;}
+        button {height:40px; width:130px; background-color:red; color:white; font-size:20px}
+        button:hover {background-color:red;}
+        img {width:100%; max-width:120px}
+        p {width:95%; max-width:500px; margin-left:auto; margin-right:auto;}
+        table, th, td {margin: auto; border-collapse: collapse; border: 1px solid}
+        table {width:100%; max-width:800px}
+        th {background-color:white; color:black; border-color:white}
+        .container {background-color: #212121; width: 100%; max-width: 600px; display: inline-block; border-color: #212121; border-left-color: red; border-style:solid}
+        .job {color: red}
+    </style>
+</head>
+<body>
+<h2>Torre App by Yamil Lima</h2>
+<img src="https://image.freepik.com/free-photo/glass-chess-rook-black-isolated-background_56854-700.jpg">
+<p>Search results for skill: {{ words }}</p>
+<div class="container">
+    {% for row in dict1.pics %}
+    {% for value in row %}
+        <div class="item"><img src={{value}} /></div>
+    {% endfor %}
+    {% endfor %}
+    {% for row in dict1.jobs %}
+    {% for value in row %}
+        <div class="job">{{ value }}</div>
+    {% endfor %}
+    {% endfor %}
+    {% for row in dict1.orgs %}
+    {% for value in row %}
+        <div class="item">{{ value }}</div>
+    {% endfor %}
+    {% endfor %}
+</div>
+<br><br>
+<div class="container">
+    {% for row in dict2.pics %}
+    {% for value in row %}
+        <div><img src={{value}} /></div>
+    {% endfor %}
+    {% endfor %}
+    {% for row in dict2.jobs %}
+    {% for value in row %}
+        <div class="job">{{ value }}</div>
+    {% endfor %}
+    {% endfor %}
+    {% for row in dict2.orgs %}
+    {% for value in row %}
+        <div>{{ value }}</div>
+    {% endfor %}
+    {% endfor %}
+</div>
+<br><br>
+<div class="container">
+    {% for row in dict3.pics %}
+    {% for value in row %}
+        <div><img src={{value}} /></div>
+    {% endfor %}
+    {% endfor %}
+    {% for row in dict3.jobs %}
+    {% for value in row %}
+        <div class="job">{{ value }}</div>
+    {% endfor %}
+    {% endfor %}
+    {% for row in dict3.orgs %}
+    {% for value in row %}
+        <div>{{ value }}</div>
+    {% endfor %}
+    {% endfor %}
+</div>
+</body>
+</html>

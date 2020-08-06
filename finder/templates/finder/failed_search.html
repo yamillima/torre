@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Torre App by Yamil Lima</title>
+    <style>
+        body {text-align:center; color:white; background-color:black}
+        .search-box {line-height:40px ;height:40px; font-size:20px; width:100%; max-width:500px:; resize:none; background-color:black; color:white; border:1px solid red}
+        .search-box:focus {background-color:maroon; outline-color:red;}
+        button {height:40px; width:130px; background-color:red; color:white; font-size:20px}
+        button:hover {background-color:red;}
+        img {width:100%; max-width:120px}
+        p {width:95%; max-width:500px; margin-left:auto; margin-right:auto;}
+    </style>
+    <script>
+    document.addEventListener("keydown", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("submit").click();
+        }
+    });
+    </script>
+</head>
+<body>
+<h2>Torre App by Yamil Lima</h2>
+<img src="https://image.freepik.com/free-photo/glass-chess-rook-black-isolated-background_56854-700.jpg">
+<p>No search results. Write another skill:</p>
+<p>
+    <form id="form" method="POST">{% csrf_token %}
+        <p>
+        {% for field in form %}
+            {{ field }}
+        {% endfor %}
+        </p>
+        <button id="submit" type="submit" value="submit">Search</button>
+    </form>
+</p>
+<br>
+<p>Skill suggestions: Trabajo en equipo, Python, Java</p>
+</body>
+</html>
